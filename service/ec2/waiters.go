@@ -933,11 +933,6 @@ func (c *EC2) WaitUntilNetworkInterfaceAvailableWithContext(ctx aws.Context, inp
 				Matcher: request.PathAllWaiterMatch, Argument: "NetworkInterfaces[].Status",
 				Expected: "available",
 			},
-			{
-				State:    request.FailureWaiterState,
-				Matcher:  request.ErrorWaiterMatch,
-				Expected: "InvalidNetworkInterfaceID.NotFound",
-			},
 		},
 		Logger: c.Config.Logger,
 		NewRequest: func(opts []request.Option) (*request.Request, error) {

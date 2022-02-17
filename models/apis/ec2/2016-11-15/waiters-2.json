@@ -363,11 +363,6 @@
           "matcher": "pathAll",
           "state": "success",
           "argument": "NetworkInterfaces[].Status"
-        },
-        {
-          "expected": "InvalidNetworkInterfaceID.NotFound",
-          "matcher": "error",
-          "state": "failure"
         }
       ]
     },
